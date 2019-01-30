@@ -21,7 +21,12 @@ body {
   display: block;
   margin: auto;
   margin-top: 5rem;
+  background-image: 
+  url('https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tsunami-coffee/images/bg-photo.png'
+  ); 
+  background-position: center; 
 }
+
 
 nav {
   background-color: OrangeRed;
@@ -35,6 +40,7 @@ ul {
 
 li {
   display: inline-block;
+  padding: 0.75rem 1.25rem; 
 }
 
 .supporting,
@@ -50,7 +56,10 @@ li {
   padding: 0 1rem;
 }
 
+/* coffee bean image */
 .supporting img {
+width: 10%; 
+margin-right: 5%; 
 
 }
 
@@ -65,6 +74,7 @@ li {
 }
 
 .rating h1 {
+  font-size: 2.5rem; 
 
 }
 
@@ -85,6 +95,7 @@ li {
 }
 
 .location img {
+  width: 100%; 
 
 }
 
@@ -99,4 +110,34 @@ footer .container {
   justify-content: space-between;
   padding: 5em 0;
   color: white;
+}
+
+@media only screen and (max-width: 960px) {
+  .main {
+    padding-top: 0; /* remove top margin when browser scales down */
+  }
+}
+
+/* make image dissapear */
+
+@media only screen and (max-width: 700px) {
+  .supporting img {
+    display: none; 
+  }
+}
+
+/* set font-size, image size, and footer nav */
+@media only screen and (max-width: 470px) {
+  .rating h1 {
+    font-size: 2rem; 
+  }
+
+  .gallery img {
+    width: 100%; 
+    margin: 0; 
+  }
+  
+  footer nav {
+    display: none; 
+  }
 }
